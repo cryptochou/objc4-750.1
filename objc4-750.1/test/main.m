@@ -12,10 +12,10 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Class suprerClass = [NSObject class];
-        Class someClass = objc_allocateClassPair(suprerClass, "someClass", 0);
-        objc_registerClassPair(someClass);
-        id someInstance = [[someClass alloc] init];
-        NSLog(@"%@", someInstance);
+        Class DynamicClass = objc_allocateClassPair(suprerClass, "DynamicClass", 0);
+        objc_registerClassPair(DynamicClass);
+        id dynamicInstance = [[DynamicClass alloc] init];
+        NSLog(@"%@", dynamicInstance);
     }
     return 0;
 }
